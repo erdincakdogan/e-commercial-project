@@ -7,8 +7,7 @@ const ProductItem = ({ product, products, setProducts }) => {
   const { imageUrl, productName, productPrice } = product;
 
   const [title, setTitle] = useState(productName);
-  const [counter, setCounter]=useState(Number(productPrice))
-
+  const [counter, setCounter] = useState(Number(productPrice));
 
   const clickHandler = () => {
     setTitle("Updated!");
@@ -26,16 +25,15 @@ const ProductItem = ({ product, products, setProducts }) => {
       </div>
       <ProductInfo>
         <h2>{title}</h2>
-      <Counter
-      productPrice={productPrice}
-      counter={counter}
-      setCounter={setCounter}
-      >
-        <span>{counter}$</span>
-
-      </Counter>
+        <Counter
+          productPrice={productPrice}
+          counter={counter}
+          setCounter={setCounter}
+        >
+          <span>{counter}$</span>
+        </Counter>
         <br />
-        <button onClick={clickHandler}>Update Product</button>
+        <button onClick={clickHandler}>Update</button>
         <button onClick={deleteHandler} className="btn-delete">
           Delete
         </button>
