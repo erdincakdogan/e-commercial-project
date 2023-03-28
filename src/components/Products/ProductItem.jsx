@@ -35,7 +35,7 @@ const ProductItem = ({ product, products, setProducts }) => {
 
       </Counter>
         <br />
-        <button onClick={clickHandler}>Update Data</button>
+        <button onClick={clickHandler}>Update Product</button>
         <button onClick={deleteHandler} className="btn-delete">
           Delete
         </button>
