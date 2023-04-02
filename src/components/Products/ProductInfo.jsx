@@ -1,10 +1,10 @@
-const ProductInfo = (props) => {
-  return (
-    <div className="product-info">
-      <span className="ad">e-shop test</span>
-      {props.children}
-    </div>
-  );
-};
+// const ProductInfo = (props) => {
+//   return (
+//     <div className="product-info">
+//       <span className="ad">e-shop test</span>
+//       {props.children}
+//     </div>
+//   );
+// };
 
-export default ProductInfo;
+// export default ProductInfo;

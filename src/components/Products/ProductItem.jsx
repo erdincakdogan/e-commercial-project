@@ -4,22 +4,23 @@ import "../../styles/ProductItem.css";
 import Counter from "../Counter";
 import PRODUCT from "../../product_data";
 
-const ProductItem = ({ product, products, setProducts }) => {
+const ProductItem = ({ product }) => {
   const { id, productName, price, productImage } = product;
 
-  const [title, setTitle] = useState(productName);
   const [counter, setCounter] = useState(Number(price));
 
   return (
     <div className="product-item">
       <div className="product-image">
-        <img src={productImage} alt="" />
+        <img className="product-img" src={productImage} alt="" />
       </div>
-      <ProductInfo>
-        <h2>{title}</h2>
+      <div className="product-detail">
+        <span className="product-detail-name">{productName}</span>
 
-        <br />
-      </ProductInfo>
+        <span>{price}</span>
+      </div>
+
+      <br />
     </div>
   );
 };
