@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ProductInfo from "./ProductInfo";
+
 import "../../styles/ProductItem.css";
 import Counter from "../Counter";
 import PRODUCT from "../../product_data";
@@ -16,8 +16,11 @@ const ProductItem = ({ product }) => {
       </div>
       <div className="product-detail">
         <span className="product-detail-name">{productName}</span>
-
         <span>{price}</span>
+        <br />
+        <span>
+          <button>Add to Basket</button>
+        </span>
       </div>
 
       <br />
