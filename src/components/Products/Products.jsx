@@ -3,10 +3,9 @@ import "../../styles/Products.css";
 import { useState } from "react";
 import PRODUCT from "../../product_data";
 
-const Products = () => {
+const Products = ({ cart, setCart, product }) => {
   const [products, setProducts] = useState(PRODUCT);
 
-  console.log("products", products);
   return (
     <div className="product-wrapper">
       <h1>Products</h1>
@@ -21,6 +20,8 @@ const Products = () => {
                 key={product.id}
                 products={products}
                 setProducts={setProducts}
+                cart={cart}
+                setCart={setCart}
               />
             </div>
           ))
