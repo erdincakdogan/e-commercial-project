@@ -5,6 +5,7 @@ import "../../styles/ProductItem.css";
 const ProductItem = ({ product, cart, setCart }) => {
   const addToCart = (product) => {
     setCart([...cart, product]);
+    console.log(setCart);
   };
 
   return (
@@ -14,7 +15,7 @@ const ProductItem = ({ product, cart, setCart }) => {
       </div>
       <div className="product-detail">
         <span className="product-detail-name">{product.productName}</span>
-        <span>{product.price}$</span>
+        <span> {product.price}$</span>
         <br />
         <span>
           <button onClick={() => addToCart(product)}>Add to Basket</button>
