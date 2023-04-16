@@ -1,21 +1,23 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { Context } from "../../App";
 
 import "../../styles/ProductItem.css";
 
-const ProductItem = ({ product, cart, setCart }) => {
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-    console.log(setCart);
+const ProductItem = ({ product }) => {
+  const [context, setContext] = useContext(Context);
+  const addToCart = (item) => {
+    console.log(item);
+    setContext([...context, item]);
   };
 
   return (
     <div className="product-item">
-      <div className="product-image">
+      <div className="product-top">
         <img className="product-img" src={product.productImage} alt="" />
       </div>
-      <div className="product-detail">
-        <span className="product-detail-name">{product.productName}</span>
-        <span> {product.price}$</span>
+      <div className="product-bottom">
+        <span className="product-title">{product.productName}</span>
+        <span className="product-price"> {product.price}$</span>
         <br />
         <span>
           <button onClick={() => addToCart(product)}>Add to Basket</button>
@@ -23,6 +25,7 @@ const ProductItem = ({ product, cart, setCart }) => {
       </div>
 
       <br />
+      <div>{context.count}</div>
     </div>
   );
 };

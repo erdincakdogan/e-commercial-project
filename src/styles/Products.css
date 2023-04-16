@@ -1,15 +1,16 @@
 .product-wrapper {
     padding: 40px;
-    
-
   }
-  
   .products {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     padding: 20px;
-    
-
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+    align-items:start
   }
+
+
   

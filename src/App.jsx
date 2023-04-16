@@ -1,18 +1,17 @@
 import "./styles/App.css";
 import Products from "./components/Products/Products.jsx";
-import { useState } from "react";
-import Cart from "./components/Products/Cart";
+import { useState, createContext, useContext } from "react";
 
+export const Context = createContext();
 const App = () => {
   const [cart, setCart] = useState([]);
+  const [title, setTitle] = useState("hello title");
 
-  const emptyCart = () => {
-    setCart([]);
-  };
   return (
     <div className="App">
-      <Products cart={cart} emptyCart={emptyCart} />
-      <Cart cart={cart} emptyCart={emptyCart} />
+      <Context.Provider value={[cart, setCart]}>
+        <Products />
+      </Context.Provider>
     </div>
   );
 };
