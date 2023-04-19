@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/Cart.css";
-/* 
+
 const Cart = ({ cart, emptyCart }) => {
   const totaly = cart.reduce((acc, item) => acc + item.price, 0);
 
@@ -23,4 +23,3 @@ const Cart = ({ cart, emptyCart }) => {
 };
 
 export default Cart;
-*/
